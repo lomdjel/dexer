@@ -1,0 +1,19 @@
+dexer_user:
+    resource: "@DexerUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+dexer_front:
+    resource: "@DexerFrontBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+login:
+    pattern:   /login
+    defaults:  { _controller: DexerUserBundle:Security:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    pattern:   /logout

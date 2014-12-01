@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="Your description" name="description">
+		<meta content="Your,Keywords" name="keywords">
+		<meta content="ResponsiveWebInc" name="author">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="shortcut icon" href="ico/favicon.ico">
+		
+	    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+	    
+        
+        {% block stylesheets %}
+        	<title>{% block title %}Dexer - Livraison{% endblock %}</title>
+        	
+        	<!-- CSS -->
+		    <link href="{{ asset('public/delivery/css/style.css') }}" rel="stylesheet" media="screen">
+		
+		    <!-- Resources -->
+		    <link href="{{ asset('public/delivery/css/font-awesome.min.css') }}" rel="stylesheet">
+		    
+		    <link href="{{ asset('public/delivery/css/animate.css') }}" rel="stylesheet">
+		    
+		    <link href="{{ asset('public/delivery/css/lightbox.css') }}" rel="stylesheet">
+		    
+		    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+		    
+		    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+		
+		    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		    <!--[if lt IE 9]>
+		      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		    <![endif]-->
+		    
+		    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        	
+        {% endblock %}
+        
+    </head>
+    <body>
+    	{% include '::Delivery/header.html.twig' %}
+        {% block body %}{% endblock %}
+        {% include '::Delivery/footer.html.twig' %}
+        
+        {% block javascripts %}
+        <!-- Bootstrap core JavaScript
+		    ================================================== -->
+		    <!-- Placed at the end of the document so the pages load faster -->
+		    
+		    <script src="{{ asset('public/delivery/js/jquery.js')}}"></script>
+		    
+		    <script src="{{ asset('public/delivery/js/bootstrap.min.js')}}"></script>
+		    
+		    <script src="{{ asset('public/delivery/js/scrolltopcontrol.js')}}"></script>
+		    
+		    <script src="{{ asset('public/delivery/js/lightbox-2.6.min.js')}}"></script>
+		    
+		    <script src="{{ asset('public/delivery/js/custom.js')}}"></script>
+		    
+		    <script src="{{ asset('public/delivery/js/index.js')}}"></script>
+		 {% endblock %}
+    </body>
+</html>

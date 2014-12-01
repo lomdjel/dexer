@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Dexer!{% endblock %}</title>
+        <meta content="Your description" name="description">
+		<meta content="Your,Keywords" name="keywords">
+		<meta content="ResponsiveWebInc" name="author">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		
+        {% block stylesheets %}
+        
+        	<!-- Styles -->
+			<!-- Bootstrap CSS -->
+			<link href="{{ asset('public/demenagement/css/bootstrap.min.css') }}" rel="stylesheet" media="screen" >
+			<!-- Slider CSS -->
+			<link href="{{ asset('public/demenagement/css/slider.css') }}" rel="stylesheet" media="screen" >
+			<!-- Pretty Photo -->
+			<link href="{{ asset('public/demenagement/css/prettyPhoto.css') }}" rel="stylesheet" media="screen" >
+			<!-- Font awesome CSS -->
+			<link href="{{ asset('public/demenagement/css/font-awesome.min.css') }}" rel="stylesheet" media="screen" >
+			<!-- Custom CSS -->
+			<link href="{{ asset('public/demenagement/css/style.css') }}" rel="stylesheet" media="screen" >
+			<!-- Color Stylesheet - orange, blue, pink, brown, red or green-->
+			<link href="{{ asset('public/demenagement/css/blue.css') }}" rel="stylesheet" media="screen" >
+			
+			
+        {% endblock %}
+        <!-- Favicon -->
+        <link rel="icon" rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    
+    <body>
+    	{% include '::Demenagement/header.html.twig' %}
+        {% block body %}{% endblock %}
+        {% include '::Demenagement/footer.html.twig' %}
+        
+        {% block javascripts %}
+        	<!-- Javascript files -->
+			<!-- jQuery -->
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/jquery.js')}}"></script>
+			<!-- Bootstrap JS -->
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/bootstrap.min.js')}}"></script>
+			<!-- Isotope, Pretty Photo JS -->
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/jquery.isotope.js')}}"></script>
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/jquery.prettyPhoto.js')}}"></script>
+			<!-- Support Page Filter JS -->
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/filter.js')}}"></script>
+			<!-- C Slider JS -->
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/jquery.cslider.js')}}"></script>
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/modernizr.custom.28468.js')}}"></script>
+			<!-- Respond JS for IE8 -->
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/respond.min.js')}}"></script>
+			<!-- HTML5 Support for IE -->
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/html5shiv.js')}}"></script>
+			<!-- Custom JS -->
+			<script type="text/javascript" src="{{ asset('public/demenagement/js/custom.js')}}"></script>
+			<script>
+				$(function() {
+				
+					$('#da-slider').cslider({
+						autoplay	: true,
+						interval : 6000
+					});
+				
+				});
+			</script>
+        {% endblock %}
+    </body>
+</html>
